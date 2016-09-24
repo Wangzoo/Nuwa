@@ -15,7 +15,6 @@ import cn.jiajixin.nuwa.Nuwa;
 public class MainActivity extends AppCompatActivity {
 
     private TextView textView;
-    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,22 +44,11 @@ public class MainActivity extends AppCompatActivity {
      */
     private void findView() {
         textView = (TextView) findViewById(R.id.main_tv);
-        button = (Button) findViewById(R.id.main_btn);
 
         setText();
 
-        button.setOnClickListener(new PatchListener());
     }
 
 
-    /**
-     * 打补丁监听
-     */
-    class PatchListener implements View.OnClickListener{
 
-        @Override
-        public void onClick(View v) {
-            Nuwa.loadPatch(MainActivity.this,"/sdcard/patch.jar");
-        }
-    }
 }

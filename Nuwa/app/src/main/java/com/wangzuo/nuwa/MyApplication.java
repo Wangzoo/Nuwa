@@ -22,5 +22,6 @@ public class MyApplication extends Application{
 
         Nuwa.init(this);
         Nuwa.loadPatch(this,"/sdcard/patch.jar");
+
     }
 }
